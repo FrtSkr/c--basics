@@ -1,0 +1,15 @@
+C:\vbt_C#\05.07.2022-ilk-ders\bin\Debug\net6.0\05.07.2022-ilk-ders.exe
+C:\vbt_C#\05.07.2022-ilk-ders\bin\Debug\net6.0\05.07.2022-ilk-ders.deps.json
+C:\vbt_C#\05.07.2022-ilk-ders\bin\Debug\net6.0\05.07.2022-ilk-ders.runtimeconfig.json
+C:\vbt_C#\05.07.2022-ilk-ders\bin\Debug\net6.0\05.07.2022-ilk-ders.dll
+C:\vbt_C#\05.07.2022-ilk-ders\bin\Debug\net6.0\05.07.2022-ilk-ders.pdb
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\05.07.2022-ilk-ders.csproj.AssemblyReference.cache
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\05.07.2022-ilk-ders.GeneratedMSBuildEditorConfig.editorconfig
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\05.07.2022-ilk-ders.AssemblyInfoInputs.cache
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\05.07.2022-ilk-ders.AssemblyInfo.cs
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\05.07.2022-ilk-ders.csproj.CoreCompileInputs.cache
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\05.07.2022-ilk-ders.dll
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\refint\05.07.2022-ilk-ders.dll
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\05.07.2022-ilk-ders.pdb
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\05.07.2022-ilk-ders.genruntimeconfig.cache
+C:\vbt_C#\05.07.2022-ilk-ders\obj\Debug\net6.0\ref\05.07.2022-ilk-ders.dll
