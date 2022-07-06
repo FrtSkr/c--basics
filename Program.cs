@@ -1,4 +1,5 @@
-﻿internal class Program
+﻿using System.Collections;
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -149,13 +150,173 @@
             Console.WriteLine("Öğrenci kaydınız bulunamadı!");
         }
 
+        // List yapısı
+        List<string> lstCity = new List<string>();
+        lstCity.Add("İstanbul");
+        lstCity.Add("Ankara");
+        lstCity.Add("İzmir");
+
+        List<string> lstCountry = new List<string>();
+        lstCountry.Add("Türkiye");
+        lstCountry.Add("Almanya");
+        lstCountry.Add("İtalya");
+
+        // aynı tipteki iki listeyi birleştirir.
+        lstCity.AddRange(lstCountry); 
+
+        if(lstCity.Contains("İstanbul")){
+            Console.WriteLine("Mevcut");
+        }  
+        else{
+            Console.WriteLine("Mevcut Değil");
+        }
+
+        foreach(string value in lstCity){
+            Console.WriteLine(value);
+        }
+
+        lstCity.Remove("İstanbul");
+        lstCity.RemoveAt(0);
+
+        lstCity.Clear();
+
+        //ArrayList
+
+        ArrayList dynamicList = new ArrayList();
+        dynamicList.Add("Ankara");
+        dynamicList.Add("İstanbul");
+        dynamicList.Add("İzmir");
+
+        if(dynamicList.Contains("İstanbul")){
+            Console.WriteLine("Mevcut");
+        }else {
+            Console.WriteLine("Mevcut değil");
+        }
+
+        foreach(var item in dynamicList){
+            Console.WriteLine(item);
+        }
+
+        // HashTable
+
+        Hashtable cityList = new Hashtable();
+        cityList.Add(34, "İstanbul");
+        cityList.Add(6, "Ankara");
+        Console.WriteLine("İl Kodu Giriniz: ");
+        int ilKod = Convert.ToInt32(Console.ReadLine());
+        if(cityList.Contains(ilKod)){
+            Console.WriteLine("İlk Kodu Mevcut");
+        }else {
+            Console.WriteLine("İlk Kodu Mevcut Değil");
+        }
+        
+        Hashtable listCities = new Hashtable();
+        City cityİst = new City();
+        cityİst.CityCode = 34;
+        cityİst.CityName = "İstanbul";
+
+        City cityAnk = new City();
+        cityAnk.CityCode = 6;
+        cityAnk.CityName = "Ankara";
+
+        listCities.Add(cityİst.CityCode, cityİst.CityName);
+        listCities.Add(cityAnk.CityCode, cityAnk.CityName);
+
+        Console.WriteLine("İl Kodu Giriniz: ");
+        int plaka = Convert.ToInt32(Console.ReadLine());
+        if(listCities.Contains(plaka)){
+            Console.WriteLine("İlk Kodu Mevcut");
+        }else {
+            Console.WriteLine("İlk Kodu Mevcut Değil");
+        }
+
+        List<City> lstcities1 = new List<City>();
+        City cityIst = new City();
+        cityIst.CityCode = 34;
+        cityIst.CityName = "İstanbul";
+        lstcities1.Add(cityIst);
+
+        City cityAnkara = new City();
+        cityAnkara.CityCode = 6;
+        cityAnkara.CityName = "Ankara";
+        lstcities1.Add(cityAnkara);
+        Console.WriteLine("İl kodu giriniz: ");
+        int plaka1 = Convert.ToInt32(Console.ReadLine());
+        City c  = lstcities1.Where(x => x.CityCode == plaka1).FirstOrDefault();
+        if (c != null)
+        {
+            Console.WriteLine("İl Kodu Mevcut");
+        }
+        else
+        {
+            Console.WriteLine("İl Kodu Mevcut Değil");
+        }
+
+        // BitArray
+
+        bool[] bit = { true, false, true, false};
+        BitArray bitArray = new BitArray(bit);
+
+        // Queue : İlk giren ilk çıkar, FIFO.
+        Queue<string> lstQueue = new Queue<string>();
+        // Kuyruğun sonuna eleman ekler
+        lstQueue.Enqueue("Fırat Şakar");
+        lstQueue.Enqueue("Ali Ak");
+        lstQueue.Enqueue("Ferhat Kaplan");
+        try{
+            //Kuyruğun başındaki elemanı çıkartır
+            string nameSurname = lstQueue.Dequeue();
+            Console.WriteLine("Müşteri : ", nameSurname);
+        }catch(Exception){
+            Console.WriteLine("Bekleyen Müşteri Kalmadı.");
+        }
+
+
+        //Dictionary
+        Dictionary<int, string> dicCity = new Dictionary<int, string>();
+        dicCity.Add(6, "Ankara");
+        dicCity.Add(33, "Mersin");
+
+        int ilKod1 = 33;
+        if(dicCity.ContainsKey(ilKod1)){
+            Console.WriteLine("İl kodu mevcut");
+        }else {
+            Console.WriteLine("İl kodu mevcut değil");
+        }
+
+
+        //Stack : Son giren ilk çıkar, LIFO.
+        Stack<string> lstStack = new Stack<string>();
+        lstStack.Push("İstanbul");
+        lstStack.Push("Ankara");
+        lstStack.Push("İzmir");
+        lstStack.Push("Mersin");
+        
+        try{
+            while(lstStack.Any()){
+                
+                Console.WriteLine("City : ", lstStack.Pop());
+            }
+            
+        }catch(Exception){
+            Console.WriteLine("iL Kalmadı");
+        }
+
+
     }
     public class Student{
-            public string name { get; set; }
-            public string surName { get; set; }
-            public int number { get; set; }
-            public string identityNumber { get; set; }
+        public string name { get; set; }
+        public string surName { get; set; }
+        public int number { get; set; }
+        public string identityNumber { get; set; }
             
             
         }
+
+    public class City
+    {
+        public int CityCode { get; set; }
+        public string CityName { get; set; }
+  
+    }
 }
